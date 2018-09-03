@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <%= title %>
+  </title>
+</head>
+<body>
+	<h1>Bulletin Board</h1>
+	<form action="/messageBoard" method="post">
+		<input type="text" name="content" placeholder="enter your message ...">
+		<input type="submit" valut="send">
+	</form>
+	<a href="/login">log out</a>
+	<a href="/signup">sign up</a>
+		<a href="/user">personal page</a>
+	<ul>
+			<li>
+				name: content
+			</li>
+	 </ul>
+</body>
+</html>
