@@ -4,7 +4,10 @@ var firebase = require('../connection/firebase_connect')
 var firebaseDb = require('../connection/firebase_admin_connect')
 var fireAuth = firebase.auth()
 router.get('/', function (req, res) {
-  res.render('signup', { title: 'Sign up', error: req.flash('error') })
+  res.render('signup', {
+    title: 'Sign up',
+    error: req.flash('error')
+  })
 })
 
 router.post('/', function (req, res) {

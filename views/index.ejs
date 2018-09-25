@@ -7,13 +7,21 @@
 </head>
 <body>
 	<h1>Bulletin Board</h1>
+  <% if(!auth){ %>
+  <p>您尚未登入，只能瀏覽</p>
+  <% } %>
+  <% if(auth){ %>
 	<form action="/messageBoard" method="post">
 		<input type="text" name="content" placeholder="enter your message ...">
 		<input type="submit" valut="send">
+    <%= errors %>
 	</form>
+  <% } %>
 	<a href="/login">log out</a>
 	<a href="/signup">sign up</a>
+  <% if(auth){ %>
 		<a href="/user">personal page</a>
+  <% } %>
 	<ul>
 			<li>
 				name: content
