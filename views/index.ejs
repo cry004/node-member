@@ -23,9 +23,11 @@
 		<a href="/user">personal page</a>
   <% } %>
 	<ul>
+    <% for(item in list) { %>
 			<li>
-				name: content
+			<%= list[item].nickname %> : <%= list[item].content %>
 			</li>
+    <% } %>
 	 </ul>
 </body>
 </html>
